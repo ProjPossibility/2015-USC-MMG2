@@ -6,16 +6,21 @@ public class Spawn : MonoBehaviour
 		private float elapsed = 0f;
 		public  float SPAWN_FREQ = 1f;
 		public  float UP_OFFSET = 5f;
+	public float Y_OFFSET = 1;
 		public GameObject prefab;
 		public GameObject parent;
+		public Camera cameraObj;
 		public float x;
-	private float leftEdge, rightEdge;
+		private Vector3 leftEdge, rightEdge;
+		private float obstacleOffset;
 		// Use this for initialization
 		void Start ()
 		{
-				x = 2;
-		leftEdge = camera.ScreenToWorldPoint (new Vector3 (0, 0, 0));
-		rightEdge = camera.ScreenToWorldPoint (new Vector3 (camera.pixelWidth, 0, 0));
+				obstacleOffset = 2;
+				leftEdge = cameraObj.ScreenToWorldPoint (new Vector3 (0, 0, 0));
+				rightEdge = cameraObj.ScreenToWorldPoint (new Vector3 (cameraObj.pixelWidth, 0, 0));
+				x = Random.Range (leftEdge.x, rightEdge.y);
+				Debug.Log (x);
 		}
 	
 		// Update is called once per frame
@@ -26,22 +31,34 @@ public class Spawn : MonoBehaviour
 				if (elapsed > SPAWN_FREQ) 
 				{
 						elapsed = 0;
-						leftObject=this.spawn ();
-						rightObject=this.spawn();
+			this.spawn (x,true);
+			this.spawn (x,false);
+			//rightObject=this.spawn(x);
+						/*float lengthOfRight=(float)rightEdge.x-x-obstacleOffset;
+						Vector3 rightScale=new Vector3(lengthOfRight,0,0);
+						rightObject.transform.localScale=rightScale;
+						Vector3 rightPosition = new Vector3(rightEdge.x - lengthOfRight/2,0,0);
+						rightObject.transform.position=rightPosition;*///
 				}
-		float lengthOfLeft = x - leftEdge;
+
 
 		}
 
-		private GameObject spawn ()
+		private GameObject spawn (float x,bool isLeft)
 		{
-		Vector3 cameraPos = new Vector3(0,0,parent.transform.position.z);
-		Vector3 offset = parent.transform.up * UP_OFFSET;
-		offset.y = 0;
-				GameObject capsule = GameObject.Instantiate (prefab, cameraPos+offset, Quaternion.identity) as GameObject;
-				capsule.transform.rotation = Quaternion.Euler (0, 0, 90);
-				Vector3 vel =new Vector3(0,0,-4);
-				capsule.rigidbody.velocity = vel;
-		return capsule;
+		float block_length = isLeft ? x - leftEdge.x : rightEdge.x - x;
+		Vector3 block_scale=new Vector3(block_length,1,1);
+		Vector3 block_position=new Vector3((isLeft ? leftEdge.x + block_length/2: rightEdge.x- block_length/2) ,Y_OFFSET, UP_OFFSET);
+
+		GameObject capsule = GameObject.Instantiate (prefab, block_position,Quaternion.identity) as GameObject;
+
+		capsule.transform.localScale = block_scale;
+		capsule.transform.rotation = Quaternion.Euler (0, 0, 0);
+		Vector3 vel =new Vector3(0,0,-4);
+		capsule.rigidbody.velocity = vel;
+		capsule.rigidbody.useGravity = false;
+		Debug.Log (this.leftEdge+  " "+ this.rightEdge);
+			return capsule;
 		}
 }
+
