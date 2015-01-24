@@ -64,7 +64,7 @@ public class network : MonoBehaviour
 		void Update ()
 		{
 				Debug.Log (Network.peerType + " " + Network.connections.Length);
-				if (!started && Network.peerType != NetworkPeerType.Disconnected && Network.connections.Length != 0) {
+				if (!started && Network.peerType == NetworkPeerType.Client && Network.connections.Length != 0) {
 						this.OnConnectedToServer ();
 						this.started = true;
 				}
