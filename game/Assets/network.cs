@@ -8,7 +8,7 @@ public class network : MonoBehaviour
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
-	bool started= false;
+		bool started = false;
 		// Use this for initialization
 		void Start ()
 		{
@@ -29,6 +29,7 @@ public class network : MonoBehaviour
 		{
 				Debug.Log ("startgame");
 		}
+
 		private void startAsServer ()
 		{
 				string id = System.Guid.NewGuid ().ToString ();
@@ -36,6 +37,7 @@ public class network : MonoBehaviour
 				MasterServer.RegisterHost (MASTERSERVER_ID, id);
 				Debug.Log ("No servers found, created new server with id " + id);
 		}
+
 		public void OnClick ()
 		{
 				if (Network.peerType == NetworkPeerType.Disconnected) {
@@ -52,6 +54,7 @@ public class network : MonoBehaviour
 
 				}
 		}
+
 		void OnConnectedToServer ()
 		{
 				Debug.Log ("Connected to server");
@@ -60,10 +63,10 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-		if (!started && Network.peerType != NetworkPeerType.Disconnected && Network.connections.Length != 0) {
-			this.OnConnectedToServer();
+				Debug.Log (Network.peerType + " " + Network.connections.Length);
+				if (!started && Network.peerType != NetworkPeerType.Disconnected && Network.connections.Length != 0) {
+						this.OnConnectedToServer ();
 						this.started = true;
 				}
-				}
-
+		}
 }
