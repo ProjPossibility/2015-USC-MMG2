@@ -3,6 +3,7 @@ using System.Collections;
 
 public class network : MonoBehaviour
 {
+		public static string MASTERSERVER_ID = "2015uscmmg2";
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 
@@ -16,9 +17,18 @@ public class network : MonoBehaviour
 				//		Network.natFacilitatorPort=50005;
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						Debug.Log ("in connect");
-						MasterServer.RequestHostList ("BlindFlier");
+						MasterServer.RequestHostList (MASTERSERVER_ID);
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						Debug.Log (hostDataArray.ToString ());
+						if (hostDataArray.Length == 0) {
+								string id = System.Guid.NewGuid ().ToString ();
+								Network.InitializeServer (8, portNum, !Network.HavePublicAddress ());
+								MasterServer.RegisterHost (MASTERSERVER_ID, id, "come join");
+								Debug.Log ("No servers found, created new server with id " + id);
+						} else {
+								Network.Connect (hostDataArray [0]);
+								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0]);
+						}
 				}
 		}
 	
