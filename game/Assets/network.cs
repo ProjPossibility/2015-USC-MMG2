@@ -29,6 +29,12 @@ public class network : MonoBehaviour
 		{
 				Debug.Log ("startgame");
 		}
+		[RPC]
+		public void endGame (bool win)
+		{
+				this.started = false;
+				//todo reset the map and display end game message
+		}
 
 		private void startAsServer ()
 		{
@@ -54,19 +60,29 @@ public class network : MonoBehaviour
 
 				}
 		}
-
+		void OnConnectedToClient ()
+		{
+				Debug.Log ("Connected to client");
+		}
 		void OnConnectedToServer ()
 		{
 				Debug.Log ("Connected to server");
 				this.netview.RPC ("startGame", RPCMode.All);
+				this.startGame ();
 		}
 		// Update is called once per frame
 		void Update ()
 		{
 				Debug.Log (Network.peerType + " " + Network.connections.Length);
-				if (!started && Network.peerType == NetworkPeerType.Client && Network.connections.Length != 0) {
-						this.OnConnectedToServer ();
-						this.started = true;
+				if (!this.started) {
+						if (Network.peerType == NetworkPeerType.Client && Network.connections.Length != 0) {
+								this.OnConnectedToServer ();
+								this.started = true;
+						}
+						if (Network.peerType == NetworkPeerType.Server && Network.connections.Length != 0) {
+								this.OnConnectedToServer ();
+								this.started = true;
+						}
 				}
 		}
 }
