@@ -42,6 +42,9 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				if (this.started) {
+						return;
+				}
 				if (Network.peerType == NetworkPeerType.Disconnected && Network.connections.Length == 0) {
 						this.elapsed += Time.deltaTime;
 
@@ -49,11 +52,13 @@ public class network : MonoBehaviour
 						if (hostDataArray.Length != 0) {
 								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName + " and error " + error.ToString ());
+								this.elapsed = HOST_POLL_TIMEOUT;
 						}
 						if (elapsed > HOST_POLL_TIMEOUT) {
 								this.startAsServer ();
+								this.started = true;
 						}
-				} else if (!this.started) {
+				} else if (Network.peerType == NetworkPeerType.Client) {
 						this.netview.RPC ("startGame", RPCMode.All);
 						this.started = true;
 				}
