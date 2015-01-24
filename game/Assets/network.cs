@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class network : MonoBehaviour
@@ -8,6 +9,7 @@ public class network : MonoBehaviour
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
+		public Text text;
 		bool started = false;
 		float elapsed = 0;
 		enum nstate
@@ -18,16 +20,20 @@ public class network : MonoBehaviour
 				IN_GAME,
 		}
 		nstate m_state = nstate.DISCONNECTED;
+
+		private void chState (nstate st)
+		{
+				this.m_state = st;
+				this.text.text = st.ToString ();
+		}
+
 		// Use this for initialization
 		void Start ()
 		{
-				//		MasterServer.ipAddress="192.168.59.3";
-				//		MasterServer.port = 23466;
-				//		Network.natFacilitatorIP = "192.168.59.3";
-				//		Network.natFacilitatorPort=50005;
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						MasterServer.ClearHostList ();
 						MasterServer.RequestHostList (MASTERSERVER_ID);
+						this.chState (nstate.DISCONNECTED);
 				}
 		}
 	
@@ -35,7 +41,7 @@ public class network : MonoBehaviour
 		public void startGame ()
 		{
 				Debug.Log ("startgame");
-				this.m_state = nstate.IN_GAME;
+				this.chState (nstate.IN_GAME);
 		}
 		[RPC]
 		public void endGame (bool win)
@@ -43,7 +49,7 @@ public class network : MonoBehaviour
 				MasterServer.UnregisterHost ();
 				Network.Disconnect ();
 				this.started = false;
-				this.m_state = nstate.DISCONNECTED;
+				this.chState (nstate.DISCONNECTED);
 				//todo reset the map and display end game message
 		}
 
@@ -52,6 +58,7 @@ public class network : MonoBehaviour
 				string id = System.Guid.NewGuid ().ToString ();
 				Network.InitializeServer (4, portNum, !Network.HavePublicAddress ());
 				MasterServer.RegisterHost (MASTERSERVER_ID, id);
+				this.chState (nstate.SERVER);
 				Debug.Log ("No servers found, created new server with id " + id);
 		}
 
@@ -63,10 +70,10 @@ public class network : MonoBehaviour
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName);
 								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
 								if (error != NetworkConnectionError.NoError) {
-										m_state = nstate.DISCONNECTED;
+										this.chState (nstate.DISCONNECTED);
 										Debug.Log ("Error connected to server: " + error.ToString ());
 								} else {
-										m_state = nstate.CONNECTING_AS_CLIENT;
+										this.chState (nstate.CONNECTING_AS_CLIENT);
 								}
 						} else {
 								this.startAsServer ();
@@ -76,13 +83,13 @@ public class network : MonoBehaviour
 		void OnConnectedToClient ()
 		{
 				Debug.Log ("Connected to client");
-				this.m_state = nstate.IN_GAME;
+				this.chState (nstate.IN_GAME);
 		}
 		void OnConnectedToServer ()
 		{
 				Debug.Log ("Connected to server");
 				this.netview.RPC ("startGame", RPCMode.All);
-				this.m_state = nstate.IN_GAME;
+				this.chState (nstate.IN_GAME);
 		}
 		// Update is called once per frame
 		void Update ()
@@ -90,7 +97,7 @@ public class network : MonoBehaviour
 				if (this.m_state == nstate.CONNECTING_AS_CLIENT) {
 						this.elapsed++;
 						if (this.elapsed > CLIENT_CONNECT_TIMEOUT) {
-								this.m_state = nstate.DISCONNECTED;
+								this.chState (nstate.DISCONNECTED);
 								this.elapsed = 0;
 						}
 				}
