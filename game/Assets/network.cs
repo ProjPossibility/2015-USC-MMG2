@@ -76,7 +76,7 @@ public class network : MonoBehaviour
 								this.started = true;
 						}
 						if (Network.peerType == NetworkPeerType.Server && Network.connections.Length != 0) {
-								this.OnConnectedToServer ();
+								this.OnConnectedToClient ();
 								this.started = true;
 						}
 				}
