@@ -37,7 +37,6 @@ public class network : MonoBehaviour
 		}
 		public void OnClick ()
 		{
-				Debug.Log ("Wtf");
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
@@ -54,15 +53,12 @@ public class network : MonoBehaviour
 		}
 		void OnConnectedToServer ()
 		{
-
 				Debug.Log ("Connected to server");
+				this.netview.RPC ("startGame", RPCMode.All);
 		}
 		// Update is called once per frame
 		void Update ()
 		{
-				if (Network.peerType != NetworkPeerType.Disconnected) {
-						Debug.Log (Network.peerType.ToString ());
-				}
 		}
 
 }
