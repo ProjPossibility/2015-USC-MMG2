@@ -60,7 +60,6 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-
 				if (Network.peerType != NetworkPeerType.Disconnected) {
 						Debug.Log (Network.peerType.ToString ());
 				}
