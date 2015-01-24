@@ -9,6 +9,7 @@ public class network : MonoBehaviour
 		public string ipAdd = "127.0.0.1";
 		private float elapsed;
 		public NetworkView netview;
+		bool started = false;
 		// Use this for initialization
 		void Start ()
 		{
@@ -41,18 +42,20 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (Network.peerType == NetworkPeerType.Disconnected) {
+				if (Network.peerType == NetworkPeerType.Disconnected && Network.connections.Length == 0) {
 						this.elapsed += Time.deltaTime;
 
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
 								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName + " and error " + error.ToString ());
-								this.netview.RPC ("startGame", RPCMode.All);
 						}
 						if (elapsed > HOST_POLL_TIMEOUT) {
 								this.startAsServer ();
 						}
+				} else if (!this.started) {
+						this.netview.RPC ("startGame", RPCMode.All);
+						this.started = true;
 				}
 		}
 }
