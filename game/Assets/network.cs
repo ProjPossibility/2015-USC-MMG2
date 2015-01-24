@@ -8,6 +8,7 @@ public class network : MonoBehaviour
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		private float elapsed;
+		public NetworkView netview;
 		// Use this for initialization
 		void Start ()
 		{
@@ -46,7 +47,8 @@ public class network : MonoBehaviour
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
 								Network.Connect (hostDataArray [0]);
-								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].guid);
+								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName);
+								this.netview.RPC ("startGame", RPCMode.All);
 						}
 						if (elapsed > HOST_POLL_TIMEOUT) {
 								this.startAsServer ();
