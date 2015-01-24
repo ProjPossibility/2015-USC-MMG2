@@ -7,9 +7,7 @@ public class network : MonoBehaviour
 		public float HOST_POLL_TIMEOUT = 5.0f;
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
-		private float elapsed;
 		public NetworkView netview;
-		bool started = false;
 		// Use this for initialization
 		void Start ()
 		{
@@ -20,11 +18,9 @@ public class network : MonoBehaviour
 				MasterServer.UnregisterHost ();
 				Network.Disconnect ();
 				if (Network.peerType == NetworkPeerType.Disconnected) {
-						Debug.Log ("in connect");
 						MasterServer.ClearHostList ();
 						MasterServer.RequestHostList (MASTERSERVER_ID);
 				}
-				this.elapsed = 0;
 		}
 	
 		[RPC]
@@ -39,28 +35,31 @@ public class network : MonoBehaviour
 				MasterServer.RegisterHost (MASTERSERVER_ID, id);
 				Debug.Log ("No servers found, created new server with id " + id);
 		}
-		// Update is called once per frame
-		void Update ()
+		void OnGui ()
 		{
-				if (this.started) {
-						return;
-				}
-				if (Network.peerType == NetworkPeerType.Disconnected && Network.connections.Length == 0) {
-						this.elapsed += Time.deltaTime;
-
+				if (Network.peerType == NetworkPeerType.Disconnected) {
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
 								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName + " and error " + error.ToString ());
-								this.elapsed = HOST_POLL_TIMEOUT;
-						}
-						if (elapsed > HOST_POLL_TIMEOUT) {
+						} else {
 								this.startAsServer ();
-								this.started = true;
 						}
 				} else if (Network.peerType == NetworkPeerType.Client) {
 						this.netview.RPC ("startGame", RPCMode.All);
-						this.started = true;
+						Debug.Log ("Connected as client");
 				}
 		}
+		void OnConnectedToServer ()
+		{
+				Debug.Log ("Connected to server");
+		}
+		// Update is called once per frame
+		void Update ()
+		{
+				if (Network.peerType != NetworkPeerType.Disconnected) {
+						Debug.Log (Network.peerType.ToString ());
+				}
+		}
+
 }
