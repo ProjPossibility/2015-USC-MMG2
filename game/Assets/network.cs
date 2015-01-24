@@ -16,14 +16,13 @@ public class network : MonoBehaviour
 				//		Network.natFacilitatorPort=50005;
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						Debug.Log ("in connect");
-						Network.Disconnect ();
-						MasterServer.UnregisterHost ();
 						MasterServer.RequestHostList (MASTERSERVER_ID);
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						Debug.Log (hostDataArray.ToString ());
 						if (hostDataArray.Length == 0) {
 								string id = System.Guid.NewGuid ().ToString ();
-								Network.InitializeServer (8, portNum, !Network.HavePublicAddress ());
+								Network.InitializeServer (4, portNum, !Network.HavePublicAddress ());
+								MasterServer.UnregisterHost ();
 								MasterServer.RegisterHost (MASTERSERVER_ID, id);
 								Debug.Log ("No servers found, created new server with id " + id);
 						} else {
