@@ -7,24 +7,33 @@ public class Spawn : MonoBehaviour
 		public  float SPAWN_FREQ = 1f;
 		public  float UP_OFFSET = 5f;
 		public GameObject prefab;
-	public GameObject parent;
+		public GameObject parent;
+		public float x;
+	private float leftEdge, rightEdge;
 		// Use this for initialization
 		void Start ()
 		{
-	
+				x = 2;
+		leftEdge = camera.ScreenToWorldPoint (new Vector3 (0, 0, 0));
+		rightEdge = camera.ScreenToWorldPoint (new Vector3 (camera.pixelWidth, 0, 0));
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
+				GameObject leftObject, rightObject;
 				elapsed += Time.deltaTime;
-				if (elapsed > SPAWN_FREQ) {
+				if (elapsed > SPAWN_FREQ) 
+				{
 						elapsed = 0;
-						this.spawn ();
+						leftObject=this.spawn ();
+						rightObject=this.spawn();
 				}
+		float lengthOfLeft = x - leftEdge;
+
 		}
 
-		private void spawn ()
+		private GameObject spawn ()
 		{
 		Vector3 cameraPos = new Vector3(0,0,parent.transform.position.z);
 		Vector3 offset = parent.transform.up * UP_OFFSET;
@@ -33,5 +42,6 @@ public class Spawn : MonoBehaviour
 				capsule.transform.rotation = Quaternion.Euler (0, 0, 90);
 				Vector3 vel =new Vector3(0,0,-4);
 				capsule.rigidbody.velocity = vel;
+		return capsule;
 		}
 }
