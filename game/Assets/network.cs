@@ -8,6 +8,7 @@ public class network : MonoBehaviour
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
+	bool started= false;
 		// Use this for initialization
 		void Start ()
 		{
@@ -59,6 +60,10 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-		}
+		if (!started && Network.peerType != NetworkPeerType.Disconnected && Network.connections.Length != 0) {
+			this.OnConnectedToServer();
+						this.started = true;
+				}
+				}
 
 }
