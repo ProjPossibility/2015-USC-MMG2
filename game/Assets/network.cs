@@ -45,7 +45,6 @@ public class network : MonoBehaviour
 
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
-								Debug.Log (hostDataArray.ToString ());
 								Network.Connect (hostDataArray [0]);
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0]);
 						}
