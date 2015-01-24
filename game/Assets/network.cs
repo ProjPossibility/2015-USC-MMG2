@@ -54,10 +54,6 @@ public class network : MonoBehaviour
 						} else {
 								this.startAsServer ();
 						}
-				} else if (Network.peerType == NetworkPeerType.Client) {
-						this.netview.RPC ("startGame", RPCMode.All);
-						Debug.Log ("Connected as client");
-
 				}
 		}
 		void OnConnectedToClient ()
