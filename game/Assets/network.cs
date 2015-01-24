@@ -10,7 +10,6 @@ public class network : MonoBehaviour
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
 		public Text text;
-		bool started = false;
 		float elapsed = 0;
 		enum nstate
 		{
@@ -48,7 +47,6 @@ public class network : MonoBehaviour
 		{
 				MasterServer.UnregisterHost ();
 				Network.Disconnect ();
-				this.started = false;
 				this.chState (nstate.DISCONNECTED);
 				//todo reset the map and display end game message
 		}
@@ -105,12 +103,10 @@ public class network : MonoBehaviour
 				if (this.m_state != nstate.IN_GAME) {
 						if (Network.peerType == NetworkPeerType.Client && Network.connections.Length != 0) {
 								this.OnConnectedToServer ();
-								this.started = true;
 								return;
 						}
 						if (Network.peerType == NetworkPeerType.Server && Network.connections.Length != 0) {
 								this.OnConnectedToClient ();
-								this.started = true;
 								return;
 						}
 				}
