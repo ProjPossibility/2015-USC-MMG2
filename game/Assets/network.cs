@@ -73,7 +73,7 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				Debug.Log (Network.peerType + " " + Network.connections.Length);
+				//Debug.Log (Network.peerType + " " + Network.connections.Length);
 				if (!this.started) {
 						if (Network.peerType == NetworkPeerType.Client && Network.connections.Length != 0) {
 								this.OnConnectedToServer ();
