@@ -8,6 +8,7 @@ public class network : MonoBehaviour
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
+	public GUI.Button startBtn;
 		// Use this for initialization
 		void Start ()
 		{
@@ -35,7 +36,7 @@ public class network : MonoBehaviour
 				MasterServer.RegisterHost (MASTERSERVER_ID, id);
 				Debug.Log ("No servers found, created new server with id " + id);
 		}
-		void OnGui ()
+		void OnGUI ()
 		{
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						HostData[] hostDataArray = MasterServer.PollHostList ();
@@ -48,6 +49,7 @@ public class network : MonoBehaviour
 				} else if (Network.peerType == NetworkPeerType.Client) {
 						this.netview.RPC ("startGame", RPCMode.All);
 						Debug.Log ("Connected as client");
+
 				}
 		}
 		void OnConnectedToServer ()
@@ -57,6 +59,7 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+
 				if (Network.peerType != NetworkPeerType.Disconnected) {
 						Debug.Log (Network.peerType.ToString ());
 				}
