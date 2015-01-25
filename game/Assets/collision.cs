@@ -7,6 +7,9 @@ public class collision : MonoBehaviour {
 	public bool showMsg;
 	public collision collisionScript;
 	public Control controlScript;
+	public NetworkView network;
+	public GameObject victory_gui;
+	public GameObject defeat_gui;
 	// Use this for initialization
 	void Start () {
 		count = 0;
@@ -16,6 +19,10 @@ public class collision : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	[RPC]
+	void endGame(){
+
 	}
 	void OnCollisionEnter(Collision col)
 	{
