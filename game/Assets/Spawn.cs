@@ -35,12 +35,13 @@ public class Spawn : MonoBehaviour
 
 	// Use this for initialization
 	void Start ()
-	{Screen.SetResolution (640, 480, true);
+	{
 		m_state = spwstate.IDLE;
 		this.curr_x = this.target_x;
 
 		//try to get camera to right position
 		/*
+		 * Screen.SetResolution (640, 480, true);
 		this.cameraObj.aspect = (Screen.currentResolution.width / Screen.currentResolution.height);
 
 		float fT = 180 / Screen.width * Screen.height;
