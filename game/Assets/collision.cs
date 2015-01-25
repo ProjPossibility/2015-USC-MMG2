@@ -23,7 +23,6 @@ public class collision : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-	
 		}
 		[RPC]
 		void endGame ()
