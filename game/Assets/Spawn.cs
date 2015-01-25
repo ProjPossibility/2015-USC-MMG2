@@ -30,7 +30,8 @@ public class Spawn : MonoBehaviour
 	}
 	spwstate m_state;
 	void chstate(spwstate s){
-		Debug.Log (this.m_state + " going to " + s);	this.m_state = s;
+		//Debug.Log (this.m_state + " going to " + s);
+		this.m_state = s;
 	}
 
 	// Use this for initialization
@@ -111,6 +112,7 @@ private void changePitch()
 	float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;        
 	float w = Mathf.Abs(leftEdge.x);
 	float pitchValue = (curr_x+w)/(rightEdge.x+w)* pitchDiff;
+		if(this.pitch != null)
 	this.pitch.setTarget(pitchValue+audiopitch.minPitch);
 }
 // Update is called once per frame

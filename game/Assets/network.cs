@@ -41,6 +41,7 @@ public class network : MonoBehaviour
 		{
 				Debug.Log ("startgame");
 				this.chState (nstate.IN_GAME);
+		Application.LoadLevel ("gyroScene");
 		}
 		[RPC]
 		public void endGame (bool win)
@@ -54,7 +55,7 @@ public class network : MonoBehaviour
 		private void startAsServer ()
 		{
 				string id = System.Guid.NewGuid ().ToString ();
-				Network.InitializeServer (4, portNum, !Network.HavePublicAddress ());
+				Network.InitializeServer (32, portNum, !Network.HavePublicAddress ());
 				MasterServer.RegisterHost (MASTERSERVER_ID, id);
 				this.chState (nstate.SERVER);
 				Debug.Log ("No servers found, created new server with id " + id);
@@ -66,7 +67,7 @@ public class network : MonoBehaviour
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName);
-								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
+								NetworkConnectionError error = Network.Connect (hostDataArray [0].guid);
 								if (error != NetworkConnectionError.NoError) {
 										this.chState (nstate.DISCONNECTED);
 										Debug.Log ("Error connected to server: " + error.ToString ());
