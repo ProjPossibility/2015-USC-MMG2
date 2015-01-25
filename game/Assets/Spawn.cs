@@ -19,7 +19,7 @@ public class Spawn : MonoBehaviour
 		{
 				leftEdge = cameraObj.ScreenToWorldPoint (new Vector3 (0, 0, 0));
 				rightEdge = cameraObj.ScreenToWorldPoint (new Vector3 (cameraObj.pixelWidth, 0, 0));
-				x = -9;
+				x = -8;
 				Debug.Log (x);
 		}
 	
@@ -42,7 +42,7 @@ public class Spawn : MonoBehaviour
 				elapsedForX += Time.deltaTime;
 				if (elapsedForX > CHANGE_X_FREQ) {
 						this.changeX ();
-						elapsedForX = 0;
+						elapsedForX=0;
 				}
 
 
@@ -50,12 +50,21 @@ public class Spawn : MonoBehaviour
 
 		private void changeX ()
 		{
-				this.x = Random.Range (this.leftEdge.x, this.rightEdge.y);
+		float up = (rightEdge.x - x )/ 8;
+		float down = (leftEdge.x - x )/ 8;
+				this.x += Random.Range (up,down);
+		if (this.x < leftEdge.x+1) {
+			this.x = leftEdge.x+1;
+				}
+		if (this.x > rightEdge.x - 1) {
+						this.x = rightEdge.x - 1;
+				}
 		}
 
 		private GameObject spawn (float x, bool isLeft)
 		{
-				float block_length = isLeft ? x - leftEdge.x : rightEdge.x - x;
+				float block_length = Mathf.Abs(isLeft ? x - leftEdge.x : rightEdge.x - x);
+		block_length -= Random.Range (1, 3);
 				Vector3 block_scale = new Vector3 (block_length, 1, 1);
 				Vector3 block_position = new Vector3 ((isLeft ? leftEdge.x + block_length / 2 : rightEdge.x - block_length / 2), Y_OFFSET, UP_OFFSET);
 
