@@ -111,6 +111,7 @@ private void changePitch()
 	float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;        
 	float w = Mathf.Abs(leftEdge.x);
 	float pitchValue = (curr_x+w)/(rightEdge.x+w)* pitchDiff;
+		if(this.pitch != null)
 	this.pitch.setTarget(pitchValue+audiopitch.minPitch);
 }
 // Update is called once per frame
