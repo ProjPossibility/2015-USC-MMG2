@@ -21,7 +21,7 @@ public class network : MonoBehaviour
 		nstate m_state = nstate.DISCONNECTED;
 		void Awake ()
 		{
-				this.m_state = nstate.DISCONNECTED;
+				this.chState (nstate.DISCONNECTED);
 		}
 		private void chState (nstate st)
 		{
@@ -32,10 +32,10 @@ public class network : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+				this.chState (nstate.DISCONNECTED);
 				if (Network.peerType == NetworkPeerType.Disconnected) {
 						MasterServer.ClearHostList ();
 						MasterServer.RequestHostList (MASTERSERVER_ID);
-						this.chState (nstate.DISCONNECTED);
 				}
 		}
 	
@@ -49,6 +49,7 @@ public class network : MonoBehaviour
 		[RPC]
 		public void endGame (bool win)
 		{
+				MasterServer.ClearHostList ();
 				MasterServer.UnregisterHost ();
 				Network.Disconnect ();
 				this.chState (nstate.DISCONNECTED);
