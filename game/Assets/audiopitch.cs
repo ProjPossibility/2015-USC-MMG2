@@ -13,8 +13,13 @@ public class audiopitch : MonoBehaviour
 		public float target;
 		public float timeToDecrease = 5;
 
+		public bool end = false;
 
-	
+		public void End ()
+		{
+				this.end = true;
+				this.audio.Stop ();
+		}
 		public void setTarget (float t)
 		{
 				target = t;
@@ -25,13 +30,14 @@ public class audiopitch : MonoBehaviour
 		{
 				audio.pitch = startingPitch;
 				this.target = startingPitch;
+				this.end = false;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
 				//Implement this Weird Stuff Just so that stuff works ok?
-				if (!this.audio.isPlaying) {
+				if (!this.end && !this.audio.isPlaying) {
 						this.audio.Play ();
 				}
 //		Debug.Log(audio.pitch);

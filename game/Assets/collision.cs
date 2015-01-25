@@ -9,6 +9,7 @@ public class collision : MonoBehaviour
 		public NetworkView network;
 		public GameObject victory_gui;
 		public GameObject defeat_gui;
+		public Spawn spawn;
 		private bool end = false;
 		bool lost = false;
 		// Use this for initialization
@@ -34,6 +35,7 @@ public class collision : MonoBehaviour
 		{
 				if (end)
 						return;
+				this.spawn.End ();
 				Debug.Log ("in on collision");
 				if (col.gameObject.name == "Cube")
 						Debug.Log ("collision with cube " + this.count++);
