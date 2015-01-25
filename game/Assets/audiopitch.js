@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+public class audioPitch extends MonoBehaviour
+{
 	//Arrange the minimum and maximum pitches
 	var maxPitch = 7; //Right Turn
 	var minPitch = 2; //Left Turn
@@ -24,7 +26,6 @@
 	}
 	
 	
-	@script RequireComponent(AudioSource)
 	function Start() {
 		audio.pitch = startingPitch;
 	}
@@ -65,5 +66,4 @@ var move = false;
 //move = !move;	
 	//}
 	}
-	
-	
+	}
