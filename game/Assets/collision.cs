@@ -30,7 +30,7 @@ public class collision : MonoBehaviour
 		{
 				end = true;
 				Debug.Log ("in end game");
-				this.gameover.Play ();
+				this.gameover.audio.Play ();
 				GameObject.Instantiate (this.lost ? this.defeat_gui : this.victory_gui);
 		}
 		void OnCollisionEnter (Collision col)
