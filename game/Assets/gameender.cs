@@ -11,6 +11,10 @@ public class gameender : MonoBehaviour
 		}
 		public void end ()
 		{
+		
+				MasterServer.ClearHostList ();
+				MasterServer.UnregisterHost ();
+				Network.Disconnect ();
 				Application.LoadLevel ("mainmenu");
 		}
 		// Update is called once per frame

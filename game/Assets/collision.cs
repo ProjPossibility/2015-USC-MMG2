@@ -28,10 +28,6 @@ public class collision : MonoBehaviour
 		{
 				end = true;
 				Debug.Log ("in end game");
-		
-				MasterServer.ClearHostList ();
-				MasterServer.UnregisterHost ();
-				Network.Disconnect ();
 				GameObject.Instantiate (this.lost ? this.defeat_gui : this.victory_gui);
 		}
 		void OnCollisionEnter (Collision col)
