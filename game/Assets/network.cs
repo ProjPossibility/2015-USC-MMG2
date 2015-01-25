@@ -67,7 +67,7 @@ public class network : MonoBehaviour
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
 								Debug.Log (hostDataArray.Length + " servers found, joining server id " + hostDataArray [0].gameName);
-								NetworkConnectionError error = Network.Connect (hostDataArray [0].guid);
+								NetworkConnectionError error = Network.Connect (hostDataArray [0]);
 								if (error != NetworkConnectionError.NoError) {
 										this.chState (nstate.DISCONNECTED);
 										Debug.Log ("Error connected to server: " + error.ToString ());
