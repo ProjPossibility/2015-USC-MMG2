@@ -5,12 +5,11 @@ public class Control : MonoBehaviour
 {
 		public float deadzone_width = .2f;
 		public float x_limit = 5;
-		public int speed;
+	public int speed=500;
 		private float deadzone;
 		// Use this for initialization
 		void Start ()
 		{
-				speed = 600;
 		} 
 	
 		// Update is called once per frame

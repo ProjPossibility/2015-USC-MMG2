@@ -35,17 +35,20 @@ public class Spawn : MonoBehaviour
 
 	// Use this for initialization
 	void Start ()
-	{
+	{Screen.SetResolution (640, 480, true);
 		m_state = spwstate.IDLE;
 		this.curr_x = this.target_x;
 
 		//try to get camera to right position
+		/*
+		this.cameraObj.aspect = (Screen.currentResolution.width / Screen.currentResolution.height);
+
 		float fT = 180 / Screen.width * Screen.height;
 		fT = fT / (2.0f * Mathf.Tan (0.5f * this.cameraObj.fieldOfView * Mathf.Deg2Rad));
 		Vector3 v3T = this.cameraObj.transform.position;
 		v3T.z = -fT;
 		transform.position = v3T;
-
+*/
 
 		//set the left and right edges
 		leftEdge = cameraObj.ScreenToWorldPoint (new Vector3 (0, 0, 0));
@@ -71,7 +74,7 @@ public class Spawn : MonoBehaviour
 		Vector3 vel = new Vector3 (0, 0, -GAME_SPEED);
 		capsule.rigidbody.velocity = vel;
 		capsule.rigidbody.useGravity = false;
-		Debug.Log (this.leftEdge + " " + this.rightEdge);
+		//Debug.Log (this.leftEdge + " " + this.rightEdge);
 		return capsule;
 	}
 	private void trySpawn(){
