@@ -19,7 +19,10 @@ public class network : MonoBehaviour
 				IN_GAME,
 		}
 		nstate m_state = nstate.DISCONNECTED;
-
+		void Awake ()
+		{
+				this.m_state = nstate.DISCONNECTED;
+		}
 		private void chState (nstate st)
 		{
 				this.m_state = st;
@@ -41,7 +44,7 @@ public class network : MonoBehaviour
 		{
 				Debug.Log ("startgame");
 				this.chState (nstate.IN_GAME);
-		Application.LoadLevel ("gyroScene");
+				Application.LoadLevel ("gyroScene");
 		}
 		[RPC]
 		public void endGame (bool win)
