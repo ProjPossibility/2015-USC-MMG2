@@ -11,20 +11,21 @@ public class network : MonoBehaviour
 		public NetworkView netview;
 		public Text text;
 		float elapsed = 0;
-		enum nstate
+		public enum nstate
 		{
 				DISCONNECTED ,
 				CONNECTING_AS_CLIENT,
 				SERVER,
 				IN_GAME,
 		}
-		nstate m_state = nstate.DISCONNECTED;
+		public nstate m_state = nstate.DISCONNECTED;
 		void Awake ()
 		{
 				this.chState (nstate.DISCONNECTED);
 		}
 		private void chState (nstate st)
 		{
+				Debug.Log (st);
 				this.m_state = st;
 				this.text.text = st.ToString ();
 		}

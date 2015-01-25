@@ -28,6 +28,10 @@ public class collision : MonoBehaviour
 		{
 				end = true;
 				Debug.Log ("in end game");
+		
+				MasterServer.ClearHostList ();
+				MasterServer.UnregisterHost ();
+				Network.Disconnect ();
 				GameObject.Instantiate (this.lost ? this.defeat_gui : this.victory_gui);
 		}
 		void OnCollisionEnter (Collision col)
@@ -38,11 +42,11 @@ public class collision : MonoBehaviour
 				if (col.gameObject.name == "Cube")
 						Debug.Log ("collision with cube " + this.count++);
 				this.lost = true;
-				this.network.RPC ("endGame", RPCMode.All);
-				this.collider.isTrigger = true;
 				Control controlScript = this.GetComponent<Control> ();
 				controlScript.Stop ();
 				controlScript.enabled = false;
+				this.network.RPC ("endGame", RPCMode.All);
+				this.collider.isTrigger = true;
 		}
 		void OnGUI ()
 		{
