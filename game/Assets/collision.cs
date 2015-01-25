@@ -30,6 +30,7 @@ public class collision : MonoBehaviour
 		{
 				end = true;
 				Debug.Log ("in end game");
+				this.spawn.End ();
 				this.gameover.audio.Play ();
 				GameObject.Instantiate (this.lost ? this.defeat_gui : this.victory_gui);
 		}
@@ -37,7 +38,6 @@ public class collision : MonoBehaviour
 		{
 				if (end)
 						return;
-				this.spawn.End ();
 				Debug.Log ("in on collision");
 				if (col.gameObject.name == "Cube")
 						Debug.Log ("collision with cube " + this.count++);
