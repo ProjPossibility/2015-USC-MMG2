@@ -30,7 +30,7 @@ public class audiopitch : MonoBehaviour {
 		if(!this.audio.isPlaying){
 			this.audio.Play();
 		}
-		Debug.Log(audio.pitch);
+//		Debug.Log(audio.pitch);
 		
 		//Let's compare audio.pitch to target
 		if(audio.pitch > target)

@@ -3,96 +3,125 @@ using System.Collections;
 
 public class Spawn : MonoBehaviour
 {
-		private float elapsed = 0f;
-		private float elapsedForX = 0f;
-		public  float SPAWN_FREQ = 1f;
-		public float CHANGE_X_FREQ = 3f;
-		public  float UP_OFFSET = 5f;
-		public float Y_OFFSET = 1;
-		public GameObject prefab;
-		public GameObject parent;
-		public Camera cameraObj;
-		public float x;
-		private Vector3 leftEdge, rightEdge;
-		public audiopitch pitch;
-
-		// Use this for initialization
-		void Start ()
-		{
-				leftEdge = cameraObj.ScreenToWorldPoint (new Vector3 (0, 0, 0));
-				rightEdge = cameraObj.ScreenToWorldPoint (new Vector3 (cameraObj.pixelWidth, 0, 0));
-				x = -8;
-				Debug.Log (x);
-		}
+	public  float SPAWN_FREQ = 1f;
+	public float CHANGE_X_FREQ = 3f;
+	public float X_CH_SPEED = 1;
+	public  float UP_OFFSET = 5f;
+	public float Y_OFFSET = 1;
+	public float MIN_DELTA_TARGET = 2;
 	
-		// Update is called once per frame
-		void Update ()
-		{
-				elapsed += Time.deltaTime;
-				if (elapsed > SPAWN_FREQ) {
-						elapsed = 0;
-						this.spawn (x, true);
-						this.spawn (x, false);
-				
-						//rightObject=this.spawn(x);
-						/*float lengthOfRight=(float)rightEdge.x-x-obstacleOffset;
-						Vector3 rightScale=new Vector3(lengthOfRight,0,0);
-						rightObject.transform.localScale=rightScale;
-						Vector3 rightPosition = new Vector3(rightEdge.x - lengthOfRight/2,0,0);
-						rightObject.transform.position=rightPosition;*///
-				}
-				elapsedForX += Time.deltaTime;
-				if (elapsedForX > CHANGE_X_FREQ) {
-						this.changeX ();
-						elapsedForX = 0;
-				}
-
-
-		}
-
-		private void changeX ()
-		{
-//		float up = (rightEdge.x - x )/ 8;
-//		float down = (leftEdge.x - x )/ 8;
-//				this.x += Random.Range (up,down);
-//		if (this.x < leftEdge.x+1) {
-//			this.x = leftEdge.x+1;
-//				}
-//		if (this.x > rightEdge.x - 1) {
-//						this.x = rightEdge.x - 1;
-//				}
-				int randomNum = Random.Range ((int)this.leftEdge.x, (int)this.rightEdge.x);
-				if (this.x > randomNum) {
-						while (this.x>randomNum)
-								this.x -= Time.deltaTime;
-						this.x = randomNum;
-				} else if (this.x < randomNum) {
-						while (this.x<randomNum)
-								this.x = Time.deltaTime;
-						this.x = randomNum;
-				}
-				float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;
-				this.pitch.setTarget (Mathf.Abs ((x / (rightEdge.x - leftEdge.x)) * pitchDiff)+pitchDiff/2);
-				Debug.Log ("changed x");
-				//this.pitch.setTarget (x +(rightEdge.x - leftEdge.x)/2);
+	
+	public GameObject prefab;
+	public Camera cameraObj;
+	private Vector3 leftEdge, rightEdge;
+	public audiopitch pitch;
+	
+	
+	public float target_x = 0;//where we wanna go
+	public float curr_x;//where we are right now
+	
+	private float spawn_timer = 0;//used with SPAWN_FREQ to determine whether or not to spawn a new object
+	
+	enum spwstate{
+		MOVE_LEFT,MOVE_RIGHT, IDLE
+	}
+	spwstate m_state;
+	void chstate(spwstate s){
+		Debug.Log (this.m_state + " going to " + s);	this.m_state = s;
 	}
 
-		private GameObject spawn (float x, bool isLeft)
-		{
-				float block_length = Mathf.Abs (isLeft ? x - leftEdge.x : rightEdge.x - x);
-				block_length -= Random.Range (1, 3);
-				Vector3 block_scale = new Vector3 (block_length, 1, 1);
-				Vector3 block_position = new Vector3 ((isLeft ? leftEdge.x + block_length / 2 : rightEdge.x - block_length / 2), Y_OFFSET, UP_OFFSET);
-
-				GameObject capsule = GameObject.Instantiate (prefab, block_position, Quaternion.identity) as GameObject;
-
-				capsule.transform.localScale = block_scale;
-				capsule.transform.rotation = Quaternion.Euler (0, 0, 0);
-				Vector3 vel = new Vector3 (0, 0, -4);
-				capsule.rigidbody.velocity = vel;
-				capsule.rigidbody.useGravity = false;
-				Debug.Log (this.leftEdge + " " + this.rightEdge);
-				return capsule;
+	// Use this for initialization
+	void Start ()
+	{
+		m_state = spwstate.IDLE;
+		this.curr_x = this.target_x;
+		//set the left and right edges
+		leftEdge = cameraObj.ScreenToWorldPoint (new Vector3 (0, 0, 0));
+		rightEdge = cameraObj.ScreenToWorldPoint (new Vector3 (cameraObj.pixelWidth, 0, 0));
+		//Debug.Log (x);
+		this.updateX ();
+	}
+	
+	private GameObject spawn (float x, bool isLeft)
+	{
+		float block_length = Mathf.Abs (isLeft ? x - leftEdge.x : rightEdge.x - x);
+		block_length -= Random.Range (1, 3);
+		Vector3 block_scale = new Vector3 (block_length, 1, 1);
+		Vector3 block_position = new Vector3 ((isLeft ? leftEdge.x + block_length / 2 : rightEdge.x - block_length / 2), Y_OFFSET, UP_OFFSET);
+		
+		GameObject capsule = GameObject.Instantiate (prefab, block_position, Quaternion.identity) as GameObject;
+		
+		capsule.transform.localScale = block_scale;
+		capsule.transform.rotation = Quaternion.Euler (0, 0, 0);
+		Vector3 vel = new Vector3 (0, 0, -4);
+		capsule.rigidbody.velocity = vel;
+		capsule.rigidbody.useGravity = false;
+		Debug.Log (this.leftEdge + " " + this.rightEdge);
+		return capsule;
+	}
+	private void trySpawn(){
+		this.spawn_timer+=Time.deltaTime;
+		if(this.spawn_timer > SPAWN_FREQ){
+			this.spawn_timer = 0;
+			this.spawn(this.curr_x,true);
+			this.spawn(this.curr_x,false);
 		}
+	}
+	/**
+        This function will move curr_x to the left and update the state if appropriate.
+        */
+	private void updateLeft(){
+		
+		curr_x-=Time.deltaTime*X_CH_SPEED; 
+		if(curr_x < this.target_x){
+			this.chstate (spwstate.IDLE);
+		}
+		this.changePitch();
+	}
+	private void updateRight(){
+		//write herete here
+		
+		curr_x+=Time.deltaTime*X_CH_SPEED;
+	if(curr_x > this.target_x){
+		this.chstate (spwstate.IDLE);
+	} 
+	this.changePitch();
 }
+private void changePitch()
+{
+	float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;        
+	float w = Mathf.Abs(leftEdge.x);
+	float pitchValue = (curr_x+w)/(rightEdge.x+w)* pitchDiff;
+	this.pitch.setTarget(pitchValue+audiopitch.minPitch);
+}
+// Update is called once per frame
+void Update ()
+{
+	this.trySpawn();
+	switch(this.m_state){
+	case spwstate.MOVE_LEFT:
+		this.updateLeft();
+		break;
+	case spwstate.MOVE_RIGHT:
+		this.updateRight();
+		break;
+	case spwstate.IDLE:
+		this.updateX();
+		break;
+	}
+	
+}
+private void updateX ()
+{
+	int randomNum;
+	do{
+		randomNum = Random.Range ((int)this.leftEdge.x+1, (int)this.rightEdge.x-1);
+	}     while(Mathf.Abs(randomNum-this.target_x) < MIN_DELTA_TARGET);
+	this.target_x = randomNum;
+	if(this.target_x > this.curr_x){
+		this.chstate(spwstate.MOVE_RIGHT);
+	}else{
+		this.chstate (spwstate.MOVE_LEFT);                
+	}    }
 
+}
