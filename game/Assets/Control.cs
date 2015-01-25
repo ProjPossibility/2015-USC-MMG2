@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Control : MonoBehaviour
 {
-		public float deadzone_width = 2;
+		public float deadzone_width = .2f;
 		public float x_limit = 5;
 		public int speed;
 		private float deadzone;
@@ -16,7 +16,6 @@ public class Control : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-
 				if (Input.GetKeyDown (KeyCode.D) || Input.acceleration.x > deadzone_width / 2) {
 						if (rigidbody.transform.position.x > x_limit) {
 								rigidbody.velocity = Vector3.zero;
