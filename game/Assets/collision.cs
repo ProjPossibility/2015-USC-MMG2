@@ -10,6 +10,7 @@ public class collision : MonoBehaviour
 		public GameObject victory_gui;
 		public GameObject defeat_gui;
 		public Spawn spawn;
+		public AudioSource gameover;
 		private bool end = false;
 		bool lost = false;
 		// Use this for initialization
@@ -29,6 +30,7 @@ public class collision : MonoBehaviour
 		{
 				end = true;
 				Debug.Log ("in end game");
+				this.gameover.Play ();
 				GameObject.Instantiate (this.lost ? this.defeat_gui : this.victory_gui);
 		}
 		void OnCollisionEnter (Collision col)
