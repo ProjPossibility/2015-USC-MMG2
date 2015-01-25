@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
 	public float CHANGE_X_FREQ = 3f;
 	public float X_CH_SPEED = 1;
 	public  float UP_OFFSET = 5f;
-	public float Y_OFFSET = 1;
+	public float Y_OFFSET =0f;
 	public float MIN_DELTA_TARGET = 2;
 	public float MIN_GAP = 2;
 	public float MAX_GAP = 4;
@@ -30,8 +30,7 @@ public class Spawn : MonoBehaviour
 	}
 	spwstate m_state;
 	void chstate(spwstate s){
-		//Debug.Log (this.m_state + " going to " + s);
-		this.m_state = s;
+		Debug.Log (this.m_state + " going to " + s);	this.m_state = s;
 	}
 
 	// Use this for initialization
@@ -72,7 +71,7 @@ public class Spawn : MonoBehaviour
 		GameObject capsule = GameObject.Instantiate (prefab, block_position, Quaternion.identity) as GameObject;
 		
 		capsule.transform.localScale = block_scale;
-		capsule.transform.rotation = Quaternion.Euler (0, 0, 0);
+
 		Vector3 vel = new Vector3 (0, 0, -GAME_SPEED);
 		capsule.rigidbody.velocity = vel;
 		capsule.rigidbody.useGravity = false;
@@ -112,7 +111,6 @@ private void changePitch()
 	float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;        
 	float w = Mathf.Abs(leftEdge.x);
 	float pitchValue = (curr_x+w)/(rightEdge.x+w)* pitchDiff;
-		if(this.pitch != null)
 	this.pitch.setTarget(pitchValue+audiopitch.minPitch);
 }
 // Update is called once per frame
