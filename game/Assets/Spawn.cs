@@ -14,6 +14,8 @@ public class Spawn : MonoBehaviour
 		public Camera cameraObj;
 		public float x;
 		private Vector3 leftEdge, rightEdge;
+		public audiopitch pitch;
+
 		// Use this for initialization
 		void Start ()
 		{
@@ -42,7 +44,7 @@ public class Spawn : MonoBehaviour
 				elapsedForX += Time.deltaTime;
 				if (elapsedForX > CHANGE_X_FREQ) {
 						this.changeX ();
-						elapsedForX=0;
+						elapsedForX = 0;
 				}
 
 
@@ -50,21 +52,35 @@ public class Spawn : MonoBehaviour
 
 		private void changeX ()
 		{
-		float up = (rightEdge.x - x )/ 8;
-		float down = (leftEdge.x - x )/ 8;
-				this.x += Random.Range (up,down);
-		if (this.x < leftEdge.x+1) {
-			this.x = leftEdge.x+1;
+//		float up = (rightEdge.x - x )/ 8;
+//		float down = (leftEdge.x - x )/ 8;
+//				this.x += Random.Range (up,down);
+//		if (this.x < leftEdge.x+1) {
+//			this.x = leftEdge.x+1;
+//				}
+//		if (this.x > rightEdge.x - 1) {
+//						this.x = rightEdge.x - 1;
+//				}
+				int randomNum = Random.Range ((int)this.leftEdge.x, (int)this.rightEdge.x);
+				if (this.x > randomNum) {
+						while (this.x>randomNum)
+								this.x -= Time.deltaTime;
+						this.x = randomNum;
+				} else if (this.x < randomNum) {
+						while (this.x<randomNum)
+								this.x = Time.deltaTime;
+						this.x = randomNum;
 				}
-		if (this.x > rightEdge.x - 1) {
-						this.x = rightEdge.x - 1;
-				}
-		}
+				float pitchDiff=audiopitch.maxPitch-audiopitch.minPitch;
+				this.pitch.setTarget (Mathf.Abs ((x / (rightEdge.x - leftEdge.x)) * pitchDiff)+pitchDiff/2);
+				Debug.Log ("changed x");
+				//this.pitch.setTarget (x +(rightEdge.x - leftEdge.x)/2);
+	}
 
 		private GameObject spawn (float x, bool isLeft)
 		{
-				float block_length = Mathf.Abs(isLeft ? x - leftEdge.x : rightEdge.x - x);
-		block_length -= Random.Range (1, 3);
+				float block_length = Mathf.Abs (isLeft ? x - leftEdge.x : rightEdge.x - x);
+				block_length -= Random.Range (1, 3);
 				Vector3 block_scale = new Vector3 (block_length, 1, 1);
 				Vector3 block_position = new Vector3 ((isLeft ? leftEdge.x + block_length / 2 : rightEdge.x - block_length / 2), Y_OFFSET, UP_OFFSET);
 
