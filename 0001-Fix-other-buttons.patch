@@ -1,0 +1,58 @@
+From 054726ceb15b0734f59fcdb14a1feb6905ed1520 Mon Sep 17 00:00:00 2001
+From: Jack <jackwong@usc.edu>
+Date: Sun, 25 Jan 2015 11:58:08 -0800
+Subject: [PATCH] Fix other buttons
+
+---
+ game/Assets/defeat.prefab  | Bin 21440 -> 22232 bytes
+ game/Assets/victory.prefab | Bin 21440 -> 22232 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+diff --git a/game/Assets/defeat.prefab b/game/Assets/defeat.prefab
+index bca7cfcb93539476cfc67b525634caac1268a654..db1ea62742dcd1eed6989eb8589468057f570c9d 100644
+GIT binary patch
+delta 603
+zcmZ9|&r2IY6bJA(Ym%zO*7z$(g(`~8p_NFbR4=hfz-W_d5;5L%8WMx1*^rH*5X=f5
+zaxHTgd#NI=w#`4_rNx7S2M?ZX{40d2-G0Z;p*ZlEH=p-*clI6bu=6jhhiKA8G;>Zw
+z4amLNX=vc(z+ifi{#cgf{MPd{*m(&J@Z1VF#tQm!p8VWMQ6KQ5PiswQbzY?RbFZ`c
+z3@01ZDL!~xZSQnFD{8%MtVtdp%Okq{Sv|RA#Q0j08%2W{+8@gLb5$Q-$mxaD6fdN5
+z#k-IF>v@Dexnw_us2T|NJD5u>PP`~@D3+y9>-)5dq=Fo`w+h&IVWc5J$X}ASCk<E4
+zBfnMl8J35Q!fur9!@k1iVb{vc*a0=$F(%k=%PQZ!uzw=XLclKIg$fTWbI*RBPO}PZ
+z1U<i0q!Tmj2v)+mrXm9iIfyp@vqjkHJ=08gg3Uf4@}Tij#rDFL-4t7IzE>y1b|#L)
+zPB9<xIAvKb%}g*+iFn0kv|F4-Ua{_K(_434yBr|Vk)O!)VaP$Ejv%WJM}IKKb^x>T
+ji&Csl)S@==EM5|aQ_T%0$6+7CV@&Y)llsOMjpXSskUN{O
+
+delta 378
+zcmcbymhr%HMnwh&A0q~a-~$W{44goA0FY)d(KFLCOfzKo_y7NY?v0A-E}Mnj71<aC
+zCY$;i*OvknFhcRNx^)a0Ku!mc4^;cV2uQC0ihTenU}69p01{gT5@TjyC;+nmLe;GS
+ziY2fxFgO6k{y@dn0mT*o#S(yGzoB9cLF*Y9Sb>fLiv9Zkp9^e>npZHR#pI8^!nP4W
+zDH)*DJt#hQA%w94C}suZ--qI~@G!<5K(QJi{{a+d0L3gOJNgNW9$;f&XhD)$kp7+3
+zV{)zErp*TaER2jSlT8DRCzk{mOn$@8F?o(Z$7F{<j>!iCY#8}A{|yjl76obrf)h>*
+t3=Q@S3?42F3}P+}n>9m@GO{T+GcbH`oSYM?GWkLX%Ve3bn#l*kBml|WYTEz+
+
+diff --git a/game/Assets/victory.prefab b/game/Assets/victory.prefab
+index 4dfb6978b792d04e6d9a95a586cf2fdbda871acc..f1db40deeee861f4bb84e207c781827555098c92 100644
+GIT binary patch
+delta 707
+zcmZwEO=uHA6bJDC)Fh^`YCI^4iWVgnkzheQcuAWCjdawse$ZPp4VwmCcf;-~6@*j}
+z$;r!HJc!hjCo7VZH}O=YipLy^+M^(%C&91vKk3p2b>Qv1{mq;Gc=O`1=spoc!1?XK
+z<t~6h=EpeWc<w}Qq&|Y*Q50Fvh7Ol@uTqQ3y`h5BzIVNef(mRLB0kCwwCawhLR_03
+zbD9l>1l3}gA<QLhF2IcEIV?KkhPJP2p_*~*-ujlc<^R<d9ItjYm{d1wDhPvK#nykT
+zbL)?ubv@s%DBpI&-e<0D+19_Mj83tXO||&Xc=f#ZeYnlsWG0qrZO;AnhL+)?-B(x7
+zE@F;WrLjwq&$&VC(ngt^))~7(+cf|*ng5E-$u73gCW7%ZMwf+c_RhTgM{IXbJw+zT
+z^Pqi??bFvuQKs#sy^G^Bt?`%Lo4Y95w3DoPAIFjCl31eM!8q`NXyPcbk}|kqIa-%?
+ztIxh1oDx%;fnnNe91FAGlJolE_)9%4lX^v3x+#Y(vucLfq3_F4U6Bc0m5I)Z%!nOq
+z5XVvhn9l>{60ox*I^x`(P2xaj-^53eS}3w#1#Mk;psN#U{q}5n@b$9H3+@zpOzuyc
+IgEM!30Q|+HssI20
+
+delta 379
+zcmcbymhr%HMnwh&A0q~a-~$W{44goA0FY)d(KFLCOfzKo_y7NY?v0A-E}Mnj71?A3
+zfKsP+GJ;evlman`1;S^5Vil7EeT8j7+*Bl)G_`dM89=cFpcv4s|3yGL11NR^DCPiU
+zgDe1vWdX%FCNBh<P{9P`0`VWHOde3Cf`x&h11S6(D%R$<o`HcC=uDv4FR0j?k3ozU
+zlRpAYhycpS0A=n$abHCUV+Bym3dp|?#ajPE8Fv81T7diqP^<$KbC~StCoFn`je(&C
+zNoGO%cUF(dwSI>tJNUCOvP^dMH=f+$?*QZpY`y^$5e2FRf)h>*3=Q@S3?42F3}P+}
+hn?D9fGc)pS<_&qt$fn@T!0^Fw@}JN-lMjSR003_VV$c8p
+
+-- 
+1.9.5.msysgit.0
+

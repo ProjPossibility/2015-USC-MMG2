@@ -1,0 +1,46 @@
+From 9f411517803ea5f9727e9cfef898b5ad4d71bfde Mon Sep 17 00:00:00 2001
+From: Jack <jackwong@usc.edu>
+Date: Sun, 25 Jan 2015 11:31:02 -0800
+Subject: [PATCH] Make button bigger and transparent
+
+---
+ game/Assets/mainmenu.unity | Bin 42620 -> 43412 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+diff --git a/game/Assets/mainmenu.unity b/game/Assets/mainmenu.unity
+index 574b9dafd2c23868487cb876ac9cb5a8e62bdf7a..dd92a1fd0e27cb918c0374518f60399333a28cf8 100644
+GIT binary patch
+delta 1057
+zcmY+D?@Lor7{|}q?(SyI+}M<<Gg>NM6iiFPGSU1&)(R?n5fQlSoLZaP*fbKdDH%uv
+zl}AOK)S@@;Rmpu(S#NqLr4~dG5;gyUG6J)**7wXi&<oG*^L)<tJU`Ao+gQ+yz1KJh
+znXDruK1K-1fbYVaRFxkruk5TO|B}gM{;XrpL2Zgzzo=!amqg`pv6r%hPR#K5I|zl^
+z!Ok49u)LB2x|g|hMJ%zWjzvpyXmKiPbsS<@lATJas86yolhI5|*-*BHt=5R_j+Dt>
+zfj*JUY;B)a`5>8gD_<*?v~2l=gWasRvMi^Ki5IM_#%ZT{?7Xv#<}1U_*UhCXDBdXh
+zugKwJp+H}dG{|8ODdGdD5ATi)VlZ_7jaoW=0lAm-v>o*YyJaF^&B$h(Ekb)B;A5t2
+zE6wC#J`bU4@CDr7@L9RvEr)x<sY!S7^;~uRc$YsA@|>1K9)EADewb}^<m!0IGNtui
+zA&m^d<t=b)yD@GtVevNnglaCZ7+5`GoOCjTw+xm5bHV4w&sjTIy-3Jm_+M0WgAIa7
+zh*wm5v;4Gh2CN@3YDQ9p7XT$aA=Q9?)r5;+F0dfjhRT+}-hnlN{ZZLlFq?spb71_q
+zxM}11+8~$*etI|o>?0T-?zg&E7mw&`yK$xLfS*+pAshj_hB%>`F7V@`VFw`th|>v0
+zun{n>`=ut-bKTDE%^1L3U{%oZ8=ShuV3T0M2*A3!`B}WpYcLYh1C}oG9PBFC)@J6w
+z*1?9MOHc9wY%p{CAnup3>oKstE%`dYY`Zr1CcyXe9}gD-3K~Lws?BtQ&6qZie@$gw
+ze6v}(JEozd6QVLYeoLS_RxouSV+C3G<7TI(oTC#03q}PtJvGBxqDAoS*?b;C<{NO;
+z@lS5S2h3@r>|xZqDK?0U3n%L+W#7kh6ytPILo1Yl`wHbBldy_dHJ7bE5ENhRvR0gL
+MM2be`)1#Q?Kf605_y7O^
+
+delta 796
+zcmYk4O-NKx6vxk<k2l(A4U7t-FKKdOUJi(2$P^AuWin`+$c2kwM$JAPOBs-6k<COc
+zDhi6D=^`gZ`jCRKyU?UX%jm;|Hd0`-Y*_?3l{WpazG5C6-nqYX-v9p3yLaS+W$mrS
+zOElU`^xy&!6(djMO?&E^>grE6(w}@jUpebt@XGVuU&XWH6~Wv3H2HK_TyV30yYO<%
+z?&DP5UY_&o!nd(9N-H^IcXG~O#tnup{E7;LFO~Z^VU+P>!!2sLq198;Gn7a~lVrn&
+z0RXpLHC)wl=k7%-$NGz`X9f~{d$^oKtq#uGHU89AB|N;^7T^x2i^HupZfe&>6(4I4
+z2wkSyUmvzB@3qo1QX{&CkP0)Rmq*=%;ti~`X2ig5fwf?bDf0=uyTF#gV#w9#igkkp
+zHKKjUKb!I9<6KRWXGh(s94bN3b+h{&D)kPcL9jKGErLygshxhC>^;~QunsUazY6P&
+zBNQ$o>P7y~xee?Qm~#Hh{MHT@#8K%)TWJLa6&heCAHCxaEu%DCAfXL>Ki;{8C<*q{
+zlyHD8ffa6F1ZMCQ6k^WJ0di*d{7f{y1a`JS^*LC$gh*YRtQiYnFZml3BBdMl{=4gW
+zF?sPcSmB|Z0Ly}1DNyKDeSBcdT`}m|^zg&<a7uN%WZ#%Y$i(<{o3Qcv-9~Pni15{k
+zC&J1N8C<k+8+T^(awy_?b&x2%pD2PKU(rH*Efbgey+MnpmN%!Q;Fjs2Oi!P)YLP>#
+RnUCD}@s1gnG#>U_{sO_U<2L{R
+
+-- 
+1.9.5.msysgit.0
+
