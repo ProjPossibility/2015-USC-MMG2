@@ -6,14 +6,1258 @@ Direct3D:
     Vendor:   Intel
     VRAM:     32 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.111 seconds
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\GitHub\Hackathon\game\gyroTest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\GitHub\Hackathon\game\gyroTest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading E:\GitHub\Hackathon\game\gyroTest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\GitHub\Hackathon\game\gyroTest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.313 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Akhi\Documents\Hackathon\gyroTest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\GitHub\Hackathon\game\gyroTest_Data\Managed\System.dll (this message is harmless)
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Awake() (at E:\GitHub\Hackathon\game\Assets\network.cs:24)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Start() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:71)
+ 
+(Filename: E Line: 0)
+
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Start() (at E:\GitHub\Hackathon\game\Assets\network.cs:36)
+ 
+(Filename: E Line: 0)
+
+SERVER
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:startAsServer() (at E:\GitHub\Hackathon\game\Assets\network.cs:65)
+network:OnClick() (at E:\GitHub\Hackathon\game\Assets\network.cs:83)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:576)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:718)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:36)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:45)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:406)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:290)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:162)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\EventSystem.cs:261)
+ 
+(Filename: E Line: 0)
+
+No servers found, created new server with id 91714e15-32e6-4e0e-8fae-be0fb289889f
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:startAsServer() (at E:\GitHub\Hackathon\game\Assets\network.cs:66)
+network:OnClick() (at E:\GitHub\Hackathon\game\Assets\network.cs:83)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:576)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:718)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:36)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:45)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:406)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:290)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:162)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\EventSystem.cs:261)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+Connected to client
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:OnConnectedToClient() (at E:\GitHub\Hackathon\game\Assets\network.cs:89)
+network:Update() (at E:\GitHub\Hackathon\game\Assets\network.cs:115)
+ 
+(Filename: E Line: 0)
+
+IN_GAME
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:OnConnectedToClient() (at E:\GitHub\Hackathon\game\Assets\network.cs:90)
+network:Update() (at E:\GitHub\Hackathon\game\Assets\network.cs:115)
+ 
+(Filename: E Line: 0)
+
+startgame
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:startGame() (at E:\GitHub\Hackathon\game\Assets\network.cs:46)
+ 
+(Filename: E Line: 0)
+
+IN_GAME
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:startGame() (at E:\GitHub\Hackathon\game\Assets\network.cs:47)
+ 
+(Filename: E Line: 0)
+
+UnloadTime: 31.793781 ms
+System memory in use before: 12.8 MB.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 12.2 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 238.
+Total: 2.109410 ms (FindLiveObjects: 0.037931 ms CreateObjectMapping: 0.034361 ms MarkObjects: 0.407423 ms  DeleteObjects: 0.053103 ms)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Start() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:71)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+in on collision
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+collision:OnCollisionEnter(Collision) (at E:\GitHub\Hackathon\game\Assets\collision.cs:41)
+ 
+(Filename: E Line: 0)
+
+in end game
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+collision:endGame() (at E:\GitHub\Hackathon\game\Assets\collision.cs:32)
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\Networking.cs:408)
+collision:OnCollisionEnter(Collision) (at E:\GitHub\Hackathon\game\Assets\collision.cs:48)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+UnloadTime: 1.687260 ms
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Awake() (at E:\GitHub\Hackathon\game\Assets\network.cs:24)
+ 
+(Filename: E Line: 0)
+
+System memory in use before: 12.6 MB.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 11.5 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 168.
+Total: 3.085799 ms (FindLiveObjects: 0.025436 ms CreateObjectMapping: 0.032129 ms MarkObjects: 0.381541 ms  DeleteObjects: 1.378904 ms)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Start() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:71)
+ 
+(Filename: E Line: 0)
+
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Start() (at E:\GitHub\Hackathon\game\Assets\network.cs:36)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+SERVER
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:startAsServer() (at E:\GitHub\Hackathon\game\Assets\network.cs:65)
+network:OnClick() (at E:\GitHub\Hackathon\game\Assets\network.cs:83)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:576)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:718)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:36)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:45)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:406)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:290)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:162)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\EventSystem.cs:261)
+ 
+(Filename: E Line: 0)
+
+No servers found, created new server with id 618eb641-6c06-4616-8e06-786bfdbbf4a4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:startAsServer() (at E:\GitHub\Hackathon\game\Assets\network.cs:66)
+network:OnClick() (at E:\GitHub\Hackathon\game\Assets\network.cs:83)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:576)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent.cs:718)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\BuildAgent\work\d63dfc6385190b60\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:36)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\UI\Core\Button.cs:45)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:406)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:290)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\InputModules\StandaloneInputModule.cs:162)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\BuildAgent\work\d63dfc6385190b60\Extensions\guisystem\guisystem\EventSystem\EventSystem.cs:261)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+Connected to client
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:OnConnectedToClient() (at E:\GitHub\Hackathon\game\Assets\network.cs:89)
+network:Update() (at E:\GitHub\Hackathon\game\Assets\network.cs:115)
+ 
+(Filename: E Line: 0)
+
+IN_GAME
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:OnConnectedToClient() (at E:\GitHub\Hackathon\game\Assets\network.cs:90)
+network:Update() (at E:\GitHub\Hackathon\game\Assets\network.cs:115)
+ 
+(Filename: E Line: 0)
+
+startgame
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:startGame() (at E:\GitHub\Hackathon\game\Assets\network.cs:46)
+ 
+(Filename: E Line: 0)
+
+IN_GAME
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:startGame() (at E:\GitHub\Hackathon\game\Assets\network.cs:47)
+ 
+(Filename: E Line: 0)
+
+UnloadTime: 1.279837 ms
+System memory in use before: 12.7 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 12.3 MB.
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 1.131236 ms (FindLiveObjects: 0.013833 ms CreateObjectMapping: 0.011602 ms MarkObjects: 0.355659 ms  DeleteObjects: 0.137444 ms)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Start() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:71)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+in on collision
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+collision:OnCollisionEnter(Collision) (at E:\GitHub\Hackathon\game\Assets\collision.cs:41)
+ 
+(Filename: E Line: 0)
+
+in end game
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+collision:endGame() (at E:\GitHub\Hackathon\game\Assets\collision.cs:32)
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\BuildAgent\work\d63dfc6385190b60\artifacts\StandalonePlayerGenerated\Networking.cs:408)
+collision:OnCollisionEnter(Collision) (at E:\GitHub\Hackathon\game\Assets\collision.cs:48)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+MOVE_LEFT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateLeft() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:110)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:138)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+
+UnloadTime: 0.734969 ms
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Awake() (at E:\GitHub\Hackathon\game\Assets\network.cs:24)
+ 
+(Filename: E Line: 0)
+
+System memory in use before: 12.6 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 11.5 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 168.
+Total: 1.507423 ms (FindLiveObjects: 0.010709 ms CreateObjectMapping: 0.009817 ms MarkObjects: 0.169127 ms  DeleteObjects: 0.496673 ms)
+
+IDLE going to MOVE_RIGHT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:157)
+Spawn:Start() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:71)
+ 
+(Filename: E Line: 0)
+
+DISCONNECTED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+network:chState(nstate) (at E:\GitHub\Hackathon\game\Assets\network.cs:28)
+network:Start() (at E:\GitHub\Hackathon\game\Assets\network.cs:36)
+ 
+(Filename: E Line: 0)
+
+MOVE_RIGHT going to IDLE
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateRight() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:120)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:141)
+ 
+(Filename: E Line: 0)
+
+IDLE going to MOVE_LEFT
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+Spawn:chstate(spwstate) (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:37)
+Spawn:updateX() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:159)
+Spawn:Update() (at E:\GitHub\Hackathon\game\Assets\Spawn.cs:144)
+ 
+(Filename: E Line: 0)
+

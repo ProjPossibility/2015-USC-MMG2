@@ -5,7 +5,7 @@ using System.Collections;
 public class network : MonoBehaviour
 {
 		public string MASTERSERVER_ID = "2015uscmmg2";
-		public float CLIENT_CONNECT_TIMEOUT = 5.0f;
+		public float CLIENT_CONNECT_TIMEOUT = 50.0f;
 		public int portNum = 25001;
 		public string ipAdd = "127.0.0.1";
 		public NetworkView netview;
@@ -68,6 +68,11 @@ public class network : MonoBehaviour
 
 		public void OnClick ()
 		{
+//				MasterServer.RequestHostList (MASTERSERVER_ID);
+//				int requestHostDelay = 5;
+//				Debug.Log(Time.time);
+//				StartCoroutine(this.Delay (requestHostDelay));
+//				Debug.Log(Time.time);
 				if (Network.peerType == NetworkPeerType.Disconnected && this.m_state == nstate.DISCONNECTED) {
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
@@ -98,6 +103,7 @@ public class network : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				MasterServer.RequestHostList (MASTERSERVER_ID);
 				if (this.m_state == nstate.CONNECTING_AS_CLIENT) {
 						this.elapsed++;
 						if (this.elapsed > CLIENT_CONNECT_TIMEOUT) {
@@ -116,5 +122,12 @@ public class network : MonoBehaviour
 								return;
 						}
 				}
+		}
+		public void Disconnect ()
+		{	
+				MasterServer.ClearHostList ();
+				MasterServer.UnregisterHost ();
+				Network.Disconnect ();
+				this.chState (nstate.DISCONNECTED);
 		}
 }
