@@ -11,12 +11,13 @@ public class network : MonoBehaviour
 		public NetworkView netview;
 		public Text text;
 		float elapsed = 0;
+		float delay = 3.0f;
 		public enum nstate
 		{
 				DISCONNECTED ,
 				CONNECTING_AS_CLIENT,
 				SERVER,
-				IN_GAME,
+				IN_GAME
 		}
 		public nstate m_state = nstate.DISCONNECTED;
 		void Awake ()
@@ -68,11 +69,12 @@ public class network : MonoBehaviour
 
 		public void OnClick ()
 		{
-//				MasterServer.RequestHostList (MASTERSERVER_ID);
-//				int requestHostDelay = 5;
-//				Debug.Log(Time.time);
-//				StartCoroutine(this.Delay (requestHostDelay));
-//				Debug.Log(Time.time);
+				MasterServer.RequestHostList (MASTERSERVER_ID);
+				Invoke("StartConnection", this.delay);
+				
+		}
+		void StartConnection()
+		{	
 				if (Network.peerType == NetworkPeerType.Disconnected && this.m_state == nstate.DISCONNECTED) {
 						HostData[] hostDataArray = MasterServer.PollHostList ();
 						if (hostDataArray.Length != 0) {
